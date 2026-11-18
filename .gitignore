@@ -1,0 +1,7 @@
+/clctl
+/dist/
+*.test
+*.out
+.env
+.idea/
+.vscode/

@@ -1,0 +1,15 @@
+# docgen settings for this repository (https://github.com/JB0t/docgen).
+clis:
+  - name: clctl
+    run: [go, run, .]
+    dir: .
+    doc: USAGE.md               # keep the hand-written README separate
+    env:
+      NOTES_DIR: ~/notes        # notes commands only exist when notes are enabled
+ignore:
+  - MailboxNotEnabledForRESTAPI # Microsoft Graph error name, not a code symbol
+llm:                            # for draft, code and ask: any OpenAI-compatible server
+  url: http://127.0.0.1:8081/v1
+  model: qwen3-coder-q8
+  max_source_toks: 22000
+  max_response_toks: 8000
